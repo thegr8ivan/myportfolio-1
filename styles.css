@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background: url('personal\ photos/20231117_174956.jpg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #21c573;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.navbar .nav-links li a:hover {
+    color: #21c573;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar .nav-links li a::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 2px solid rgba(243, 156, 18, 0.5);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar .nav-links li a:hover::before {
+    opacity: 1;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    padding: 100px 50px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #21c573;
+}
+
+.hero-content h2,
+.hero-content h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.hero-buttons .btn-primary {
+    background-color: #21c573;
+    color: #000;
+    margin-right: 10px;
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: #21c573;
+}
+
+.hero-buttons .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #21c573;
+    color: #fff;
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: #21c573;
+    color: #000;
+}
+
+.hero-image img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition: transform 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%)
+}
+
+.about-section {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    gap: 30px;
+}
+
+.about-image img {
+    width: 250px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.about-details p {
+    line-height: 1.6;
+}
+
+.about-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-details ul li {
+    margin-bottom: 10px;
+}
+
+.about-details .btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #21c573;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.about-details .btn-download:hover {
+    background-color: #21c573;
+}
+
+#roles,
+#Projects,
+.skills-section,
+.blog-section {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#roles ul,
+#Projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#roles ul li,
+#Projects ul li {
+    margin-bottom: 10px;
+}
+
+.projects-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.projects-card,
+.project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    flex-basis: 30%;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.projects-card p,
+.project-card p {
+    font-weight: bold;
+    color: #21c573;
+}
+
+.skills-section .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-bar {
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.skill-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #21c573;
+}
+
+.skill-percentage {
+    background-color: #21c573;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.blog-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    flex-basis: 30%;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post h3 {
+    color: #21c573;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
